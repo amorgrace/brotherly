@@ -50,6 +50,10 @@ header {
   text-align: center; /* Center text within the nav */
 }
 
+.menu-icon {
+  display: none; /* Hide the menu icon by default */
+}
+
 .nav ul {
   list-style: none;
   display: flex;
@@ -779,4 +783,313 @@ header {
 
 .walking-animation.animate {
   animation: slideInRight 12s ease forwards; /* Different duration for a slower effect */
+}
+
+/* Media Queries for Mobile */
+/* Media Queries for Mobile */
+/* Media Queries for Mobile */
+/* Media Queries for Mobile */
+
+@media (max-width: 768px) {
+
+  /* Adjust the header and logo */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .nav {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .nav ul {
+    flex-direction: column; /* Stack nav items */
+    gap: 20px;
+  }
+
+  /* Adjust hero text for mobile */
+  .bg-note {
+    margin-left: 10px;
+  }
+
+  .bg-note h2 {
+    font-size: 50px;
+  }
+
+  .bg-note p {
+    font-size: 18px;
+  }
+
+  .bg-note img {
+    width: 100px;
+    height: 40px;
+  }
+
+  /* Adjust button spacing */
+  .hero-btn {
+    margin-left: 100px;
+    font-size: 14px;
+    padding: 16px;
+  }
+
+
+  /* Mobile view adjustments */
+.music-ex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.inner-elements, .outer-elements {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.note {
+  width: 100%;
+  margin-bottom: 10px; /* Space below the text */
+  text-align: center;/* Center-align the text within the element */
+  padding: 0 15px; /* Add horizontal padding */
+  font-size: 16px; /* Adjust font size for mobile */
+  line-height: 1.5; /* Improve readability */
+}
+
+.note-2 {
+  width: 100%;
+  margin-bottom: 10px; /* Space below the text */
+  text-align: center;/* Center-align the text within the element */
+  font-size: 16px; /* Adjust font size for mobile */
+  line-height: 1.5; /* Improve readability */
+  margin-right: 820px;
+  margin-top: 20px;
+  padding: 30px;
+
+}
+
+
+.note-img {
+  width: 80%; /* Full width for images */
+  height: auto;
+  margin-left: 100px;
+}
+
+.outer-img {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 700px;
+  
+}
+
+.down-arrow {
+  width: 40px; 
+  height: auto;
+  margin-top: 10px; 
+  display: none;
+}
+
+
+
+
+  /* Contact Us section adjustments */
+  .contact-us {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contact-us h2 {
+    color: rgb(54, 187, 239);
+    margin-right: 60px;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .contact-item {
+    margin-left: 100px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .submit-button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Projects section */
+  .projects h2 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .frames {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    background-color: ivory;
+  }
+
+  .frames iframe {
+    width: 105%;
+    height: 250px;
+    margin-left: -11px;
+    margin-bottom: -50px;
+  }
+
+  .vid-container h2 {
+    width: 100%;
+    font-size: 30px;
+    margin-top: -50px;
+    margin-left: 80px;
+  }
+
+  .vid-container p {
+    margin-top: -70px;
+  }
+
+  .countdown {
+    font-size: 2dvh;
+  }
+
+  /* Social Media section */
+  .social-media-section {
+    flex-direction: column;
+    background-color: black;
+  }
+
+  .social-box {
+    width: 50%;
+    margin: 10px 0;
+  }
+
+  /* Footer section */
+  .copyright {
+    font-size: 12px;
+  }
+}
+
+/* Styles for bookings page */
+@media (max-width: 768px) {
+  .bookings-hero {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+
+  .bookings-notes {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .bookings-form {
+    width: 100%;
+    padding: 20px;
+    right: 0;
+  }
+
+  .bookings-notes h1 {
+    font-size: 30px;
+  }
+
+  .bookings-notes h3 {
+    font-size: 20px;
+  }
+
+  .bookings-form h2 {
+    font-size: 18px;
+  }
+
+  .input-box input,
+  .input-box select {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+/* Mobile view for the toggle icon*/
+@media (max-width: 768px) {
+  /* Hide nav and show the menu icon */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    z-index: 1000;
+  }
+
+  .nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  .nav ul li {
+    margin-bottom: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Menu open state */
+  .menu-icon.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-icon.open div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .nav.show {
+    display: block;
+  }
 }

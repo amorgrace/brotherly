@@ -196,3 +196,14 @@ window.onload = function() {
   document.getElementById('lottie-bookings-animation').classList.add('animate');
   document.getElementById('lottie-walking-animation').classList.add('animate');
 };
+
+
+// toggle menu icon
+
+function toggleMenu() {
+  const nav = document.querySelector('.nav');
+  const menuIcon = document.querySelector('.menu-icon');
+  nav.classList.toggle('show');
+  menuIcon.classList.toggle('open');
+}
+
