@@ -1,0 +1,25 @@
+{
+  "name": "brotherly-2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "lottie-web": "^5.12.2",
+    "node": "^22.8.0",
+    "nodemon": "^3.1.4",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.2"
+  }
+}

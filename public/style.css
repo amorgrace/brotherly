@@ -1,0 +1,782 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playwrite+NO:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gluten:wght@100..900&family=Pacifico&family=Playwrite+NO:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  position: fixed;
+  display: flex;
+  width: 200px;
+  height: 70px;
+  margin-top: 25px;
+  margin-left: 10px;
+
+}
+
+.nav {
+  margin-top: 30px;
+  margin-left: 540px; /* Adjusts the nav position to center it */
+  background-color: rgba(0, 0, 0, 0.781); /* Background color will only cover the nav elements */
+  padding: 1px 20px; /* Adds padding for spacing around the nav elements */
+  border-radius: 30px; /* Adds rounded corners to the nav background */
+  width: 500px; /* Set the width to a fixed value */
+  text-align: center; /* Center text within the nav */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between each nav item */
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.nav li {
+  margin-right: 0; /* No additional right margin */
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-family: cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  position: relative;
+  overflow: hidden; /* Ensures the hover effect stays within the element */
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.5) 100%);
+  transition: transform 0.6s ease-in-out;
+  transform: translateY(0%);
+}
+
+.nav a:hover::before {
+  transform: translateY(-100%); /* Simulates the water flow effect */
+}
+
+.nav a:hover {
+  color: rgb(228, 44, 11); /* Changes the color on hover */
+}
+
+.swiper-slide img {
+    width: 100vw;
+    height: 99vh;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    object-fit: cover !important;
+    z-index: -1;
+    transform: scale(1);
+    animation: zoom-in 60s linear infinite;
+}
+  
+ @keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+
+  }
+}
+
+
+
+.bg-note h2 {
+  font-size: 100px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in-left 3s forwards;
+}
+
+.bg-note p {
+  font-size: 25px;
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slide-in-right 3s forwards;
+}
+
+.bg-note a {
+  text-decoration: none;
+  color: white;
+}
+@keyframes slide-in-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bg-note img {
+  margin-top: 150px;
+  margin-left: 5px;
+  width: 150px;
+  height: 60px;
+  object-fit: cover; /* Add this line */
+
+}
+
+.bg-note {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 400px;
+  margin-left: 150px;
+  color: white;
+
+}
+
+.hero-btn {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  border: 2px solid hsl(0, 0%, 100%);
+  margin-top: 20px;
+  margin-left: 170px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  z-index: 1; /* Ensure button is above other elements */
+
+}
+
+.hero-btn:hover {
+  color: white;
+  background-color: black; /* Background changes to solid black */
+  box-shadow: 0 0 10px 4px white;
+}
+
+
+.music-ex {
+  /* display: block; */
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+  margin-top: 900px; /* Adjust the value to create the desired space */
+  text-align: center;
+}
+
+.reveal {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+.inner-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note {
+  width: 45%;
+  margin-right: 20px;
+  line-height: 30px;
+  padding-left: 30px;
+  font-family: 'Raleway', serif;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+.note-img {
+  width: 40%;
+  margin-right: 100px;
+  margin-top: 70px;
+  border-radius: 40px;
+}
+
+
+
+
+.down-arrow {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  margin-left: 300px;
+  transform: translateY(0);
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+
+.outer-elements {
+  justify-content: space-between; /* Distributes space between the items */
+  align-items: center; /* Centers items vertically if they have different heights */
+  width: 100%; /* Adjust width as needed */
+}
+
+.outer-img {
+  /* Ensure the image is positioned to the extreme left */
+  margin-right: 700px; /* Optional spacing between the image and text */
+  width: 40%;
+  margin-top: -400px;
+  border-radius: 40px;
+}
+
+.note-2 {
+  margin-left: 800px;
+  margin-top: 400px;
+  width: 45%; /* Adjust width as needed */
+
+  line-height: 30px;
+  font-family: 'Raleway', serif;
+  text-align: right; /* Align text to the right within its container */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.projects {
+  background-color: grey;
+  margin-top: -20px;
+}
+.projects h2 {
+  margin-top: 100px;
+  margin-left: 620px;
+  font-size: 40px;
+  color: white;
+}
+
+.frames {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 70px;
+  padding: 70px;
+}
+
+.frames iframe {
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 600px;
+  height: 338px; /* Reduced height */
+  box-sizing: border-box;
+  border-radius: 30px;
+
+  /* Animation properties */
+  opacity: 0;
+  transform: translateY(50px) rotate(-10deg);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.frames iframe.visible {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+}
+
+.events {
+  margin-top: 40px;
+}
+
+.vid-container {
+  position: relative; /* Make the container a relative positioning context */
+  width: 100%; /* Full width of the parent container */
+  margin-top: 80px;
+}
+
+.bg-video {
+  width: 100%;
+  height: 70vh; /* Height set to 70% of the viewport height */
+  object-fit: cover; /* Ensures the video covers the area without distortion */
+  display: block;
+  object-position: center bottom;
+  z-index: -1; /* Ensure the video stays behind the text */
+
+}  
+
+.vid-container h2 {
+  position: absolute; /* Position the heading absolutely within the container */
+  top: 20%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning to be centered */
+  font-size: 40px;
+  color: white; /* White text to stand out against the video */
+  z-index: 1; /* Ensure the text is above the video */
+  padding: 10px; /* Optional: Add padding for better spacing */
+  border-radius: 5px; /* Optional: Rounded corners for a nicer look */
+}
+
+.vid-container p {
+  position: absolute; /* Position the heading absolutely within the container */
+  top: 30%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning to be centered */
+  font-size: 25px;
+  color: white; /* White text to stand out against the video */
+  z-index: 1; /* Ensure the text is above the video */
+  padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.countdown {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 6em;
+  text-align: center;
+  z-index: 1;
+}
+
+.countdown div {
+  margin: 0 50px;
+}
+
+
+.social-media-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.social-box {
+  flex: 1;
+  height: 180px; /* Increased height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-direction: column; /* Align items in a column */
+}
+
+.social-box img {
+  width: 70px; /* Increased size */
+  height: 70px; /* Increased size */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  filter: contrast(2.5); /* Increase contrast */
+}
+
+.social-box:hover img {
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 18px; /* Increased font size */
+  color: white;
+  opacity: 0;
+  position: absolute;
+  bottom: 10px; /* Position the title below the image */
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.social-box:hover .title {
+  opacity: 1;
+}
+
+.social-box:nth-child(odd) {
+  background-color: #000;
+}
+
+.social-box:nth-child(even) {
+  background-color: #777;
+}
+
+.social-box:not(:last-child) {
+  border-right: 1px solid #f0f0f0;
+}
+
+  
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-image: url("/images/footer-image.jpg");
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image within the container */
+  background-repeat: no-repeat;
+  padding: 40px;
+  color: white; /* White text color */
+}
+
+.contact-us h2 {
+  text-align: center;
+  margin-left: 80px;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: white; /* Ensure header text is white */
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  /* margin: 10px; */
+  margin-left: -150px;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+
+}
+
+.contact-item {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+.contact-item p {
+  font-size: 18px;
+  color: #fff; /* Light grey text color */
+  margin: 0;
+}
+
+.contact-right {
+  margin-top: 40px;
+  flex: 0.9; /* Revert to the initial container size */
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-right h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-right: 50PX;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid white; /* Dark grey border */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent; /* Darker grey for input fields */
+  color: white;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+.contact-form ::placeholder {
+  color: white;
+}
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #fff; /* Slightly lighter grey for the button */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: maroon; /* Even lighter grey on hover */
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+  background-color: rgb(95, 94, 94); /* Black background to match the contact section */
+  color: #ccc; /* Light grey text color */
+  font-size: 14px;
+  border-top: 1px solid #333; /* Optional border for separation */
+}
+
+.copyright p {
+  margin: 0;
+  font-family: cursive;
+  color: rgba(255, 255, 255, 0.323);
+}
+
+
+
+
+
+/* from here is the bookings page settings */
+
+.bookings-hero {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 50px 8% 0;
+}
+
+.bookings-notes {
+  max-width: 640px;
+}
+
+.bookings-notes h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  animation: slideInLeft 3s ease forwards;
+}
+
+.bookings-notes h3 {
+  font-size: 40px;
+  color: maroon;
+  animation: slideInLeft 3s ease forwards;
+}
+
+.bookings-notes p {
+  font-size: 16px;
+  margin: 15px 10 30px;
+  line-height: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  animation: slideInRight 3s ease forwards;
+}
+
+.bookings-form {
+  position: relative;
+  width: 550px;
+  height: 600px;
+  right: -7em;
+  padding: 25px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px;
+}
+
+.bookings-form h2 {
+  font-size: 1.7rem;
+  text-align: center;
+  color: maroon;
+  margin-bottom: 30px;
+}
+
+.input-box {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.input-box input {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  outline: none;
+  color: #707070;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  column-gap: 16px;
+
+}
+
+.input-box select {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  appearance: none; /* Removes default arrow for custom styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.input-box select:hover {
+  border-color: maroon; /* Change border color to maroon on hover */
+}
+
+.input-box select:focus {
+  border-color: maroon; /* Highlight border on focus */
+  outline: none;
+}
+
+.submit-button {
+  margin-left: 180px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 12px;
+  color: #fff;
+  background-color: rgba(128, 0, 0, 0.659); /* Primary button color */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.6s ease, box-shadow 0.6s ease; /* Smooth transitions */
+}
+
+.submit-button:hover {
+  background-color: maroon; /* Darker shade on hover */
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Focus outline for accessibility */
+}
+
+.success-message {
+  display: none; /* Hide by default */
+  color: #087521; /* Green color for success */
+  background-color: #78ff7a; /* Light green background */
+  border: 1px solid #28a745; /* Green border */
+  padding: 10px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+  position: absolute; /* Remove from document flow */
+  top: 20%; /* Center vertically */
+  left: 400px; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+  /* margin-left: 20px; */
+  animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+
+.success-message p {
+  font-size: 16px; /* Larger font size for the message */
+  font-weight: bold; /* Bold font for emphasis */
+}
+
+.animation-container {
+  display: flex; /* Use flexbox to align items side by side */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Align the items vertically in the container */
+  column-gap: 20px; /* Optional: space between the animations */
+}
+
+.bookings-animation, .walking-animation {
+  width: 400px; /* Set the width for both animations */
+  height: 300px; /* Set the height for both animations */
+}
+
+.walking-animation {
+  height: 220px;
+  margin-top: 40px;
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1;
+  }
+}
+
+.bookings-animation.animate {
+  animation: slideInLeft 3s ease forwards; /* Adjust duration and easing */
+}
+
+.walking-animation.animate {
+  animation: slideInRight 12s ease forwards; /* Different duration for a slower effect */
+}

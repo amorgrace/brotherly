@@ -1,0 +1,79 @@
+include ./partials/header.pug
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+
+
+    if query.success 
+        #successMessage.success-message Your appointment has been successfully submitted!
+    <section class="bookings-hero">
+        <div class="bookings-notes">
+            <h1> BOOK AN APPOINTMENT</h1>
+            <h3> Redefined! </h3>
+            <p>From music production and audio engineering to event management and studio setup, we provide a one-stop solution for all your music needs, offering expert guidance, top-notch equipment, and professional services to help you bring your musical vision to life.</p>
+
+            <div class="animation-container">
+                <div class="bookings-animation" id="lottie-bookings-animation"></div>
+                <div class="walking-animation" id="lottie-walking-animation"></div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class= "bookings-form">
+            form( id="bookingForm", action="https://api.web3forms.com/submit", method="post")
+                <input type="hidden" name="access_key" value="c6148e9a-e13d-459d-aab8-0c8a4fe825ae">
+                h2 Create Appointment!
+                <div class="input-box">
+                    <span class="icon"> </span>
+                    <label>Full Name</label>
+                    <input type="Name" placeholder="Enter Full Name" required>
+
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"> </span>
+                    <label>Email</label>
+                    <input type="email" name="Email" placeholder="Enter Email Address" required>
+
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <span class="icon"> </span>
+                        <label>Phone Number</label>
+                        <input type="text" name="Phone-Number" placeholder="eg 123+" required>
+
+                    <div class="input-box">
+                        <span class="icon"> </span>
+                        <label>Choose Date</label>
+                        <input type="date" name="Date" placeholder="Pick Appointment Date" required>
+                </div>
+
+                <div class="input-box">
+                <label for="appointment-type">Appointment Type</label>
+                <select class="app-options" id="appointment-type" name="appointment-type" required>
+                    <option value="" disabled selected>Choose Appointment</option>
+                    <option value="Audio Engineering">Audio Engineering</option>
+                    <option value="Music Tutorials">Music Tutorials</option>
+                    <option value="Events & Entertainment">Events & Entertainment</option>
+                    <option value="Studio Installation">Studio Installation </option>
+                    <option value="Procurement">Procurement</option>
+                </select>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"> </span>
+                    <label>Message (Optional)</label>
+                    <input type="text-area" name="message" placeholder="notes">
+
+                <button type="submit" class="submit-button">Submit Request</button>
+
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;">Your appointment has been successfully submitted!
+            </div>
+        </div>
+
+
+    </section>
+
+include ./partials/footer.pug
