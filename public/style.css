@@ -31,11 +31,12 @@ header {
 }
 
 .logo img {
+
   position: fixed;
   display: flex;
-  width: 200px;
-  height: 70px;
-  margin-top: 25px;
+  width: 300px;
+  height: 250px;
+  margin-top: -45px;
   margin-left: 10px;
 
 }
@@ -599,7 +600,7 @@ header {
 }
 
 .bookings-notes h1 {
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1.2;
   animation: slideInLeft 3s ease forwards;
 }
@@ -621,9 +622,9 @@ header {
 .bookings-form {
   position: relative;
   width: 550px;
-  height: 600px;
+  height: 570px;
   right: -7em;
-  padding: 25px;
+  padding:25px;
   border-radius: 40px;
   box-shadow: 0 0 5px;
 }
@@ -800,9 +801,9 @@ header {
   }
 
   .logo img {
-    width: 150px;
-    height: 50px;
-    margin-top: 10px;
+    width: 180px;
+    height: 150px;
+    margin-top: -30px;
     margin-left: 10px;
   }
 
@@ -994,11 +995,13 @@ header {
 /* Styles for bookings page */
 @media (max-width: 768px) {
   .bookings-hero {
-    flex-direction: column;
+  flex-direction: column;
     padding: 20px 5%;
+    margin-bottom: 500px;
   }
 
   .bookings-notes {
+    margin-top: 90px;
     max-width: 100%;
     text-align: center;
   }
@@ -1010,11 +1013,19 @@ header {
   }
 
   .bookings-notes h1 {
-    font-size: 30px;
+    font-size: 23px;
   }
 
   .bookings-notes h3 {
     font-size: 20px;
+  }
+
+  .animation-container {
+    width: 400px;
+  }
+
+  .walking-animation {
+    height: 130px;
   }
 
   .bookings-form h2 {
@@ -1031,6 +1042,7 @@ header {
     width: 100%;
   }
 }
+
 
 
 /* Mobile view for the toggle icon*/
